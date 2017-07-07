@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ThermostatApi.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace ThermostatApi
 {
@@ -28,6 +31,7 @@ namespace ThermostatApi
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddDbContext<ThermostatContext>(options => options.UseInMemoryDatabase());
             services.AddMvc();
         }
 
