@@ -60,7 +60,15 @@ namespace ThermostatApi.Controllers
                 return BadRequest();
             }
 
-            db.Entry(thermostat).State = EntityState.Modified;
+            var todo = db.ThermostatItems.FirstOrDefault(t => t.Id == id);
+            if (todo == null)
+            {
+                return NotFound();
+            }
+
+            if (thermostat.SetTemp != 0) todo.SetTemp = thermostat.SetTemp;
+            if (thermostat.CurrentTemp != 0) todo.CurrentTemp = thermostat.CurrentTemp;
+            if (thermostat.toggleAc) todo.acActivated = !todo.acActivated;
 
             try
             {
