@@ -11,7 +11,6 @@ namespace ThermostatApi.Models
         public int CurrentTemp { get; set; }
         public int SetTemp { get; set; }
         public bool acActivated { get; set; }
-        [JsonIgnore]
         public bool toggleAc { get; set; }
     }
 

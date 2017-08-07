@@ -14,5 +14,33 @@ namespace ThermostatApi.Controllers
 
             return View();
         }
+
+        public ActionResult Education()
+        {
+            ViewBag.Title = "Education";
+
+            return View();
+        }
+
+        public ActionResult Work()
+        {
+            ViewBag.Title = "Work Experience";
+
+            return View();
+        }
+
+        public ActionResult Skills()
+        {
+            ViewBag.Title = "Skills & Awards";
+
+            return View();
+        }
+
+        public ActionResult Transcript()
+        {
+            ViewBag.Title = "Transcript";
+
+            return View();
+        }
     }
 }

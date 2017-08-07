@@ -28,6 +28,9 @@ namespace ThermostatApi.Controllers
         }
 
         // GET: api/Thermostats
+        /// <summary>
+        /// Gets all available thermostats.
+        /// </summary>
         public IQueryable<Thermostat> GetThermostatItems()
         {
             return db.ThermostatItems;

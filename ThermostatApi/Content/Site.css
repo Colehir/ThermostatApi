@@ -15,3 +15,32 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.featurette {
+    overflow: hidden; /* Clear floats */
+}
+
+.featurette-heading {
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.featurette-image.pull-left {
+    margin-right: 40px;
+    padding-bottom: 10px;
+}
+
+.featurette-image.pull-right {
+    margin-right: 40px;
+    padding-bottom: 10px;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../Images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    }
